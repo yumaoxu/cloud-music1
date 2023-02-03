@@ -1,0 +1,156 @@
+.songDetailContainer{
+  height: 100vh;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 作者区域 */
+.songDetailContainer .arctile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500rpx;
+}
+.musicName{
+  font-size: 40rpx;
+  margin-top:8rpx;
+  color: rgb(243, 237, 237);
+}
+.author{
+  margin: 4rpx 0;
+  font-size: 28rpx;
+  color: rgba(19, 17, 17, 0.808);
+}
+.arctile text{
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.arctile .author{
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 遥感底座 */
+.circle{
+  width: 58rpx;
+  height: 58rpx;
+  left: 6rpx;
+  position: relative;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: #fff;
+}
+/* 遥感主体 */
+.needle{
+  position: relative;
+  z-index: 99;
+  top: -40rpx;
+  left: 60rpx;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transition: transform 1s;
+  transform: rotate(-20deg);
+}
+/* 遥感旋转 */
+.needleRotate{
+  transform: rotate(0deg);
+}
+/* 底座旋转 */
+.discAnimation{
+  animation: disc 17s linear infinite;
+  animation-delay: 1s;
+}
+@keyframes disc{
+  from{}
+  to{
+    rotate: 360deg;
+  }
+}
+/* 底盘容器 */
+.discContainer{
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+  /* border: 1rpx solid red; */
+}
+.disc{
+  width: 598rpx;
+  height: 598rpx;
+}
+.musicImg{
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* progress */
+.progressControl{
+  position: absolute;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  bottom: 200rpx;
+  display: flex;
+  /* border: 1rpx solid red; */
+}
+.barControl{
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background-color: rgba(0,0,0,.4);
+  margin: auto;
+}
+.audio-currentTime-Bar{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  /* width: 100rpx; */
+  height: 4rpx;
+  background-color: red;
+}
+.audio-circle{
+  position: absolute;
+  top: -4rpx;
+  right: -6rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* footer */
+.musicControl{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 40rpx;
+  display: flex;
+  border-top: 1rpx solid rgba(119, 109, 109, 0.4);
+  /* border: 1rpx solid red; */
+}
+.musicControl text{
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 50rpx;
+  color: #fff;
+}
+.musicControl .size{
+  font-size: 73rpx;
+}
+.musicControl .big{
+  font-size: 80rpx;
+}

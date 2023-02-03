@@ -1,0 +1,26 @@
+<view class="songSheetContainer">
+  <!-- header -->
+  <DayHeaders></DayHeaders>
+
+  <!-- content -->
+  <view class="sheetContainer">
+
+    <!-- header -->
+    <view class="header">
+      <text class="title">创建的歌单</text>
+      <text class="sheetNum">({{sheetList.length}}个)</text>
+    </view>
+
+    <!-- sheetList -->
+    <scroll-view scroll-y class="sheetList">
+      <view class="sheetItem" wx:for="{{sheetList}}" wx:key="id">
+        <image src="{{item.coverImgUrl}}"></image>
+        <view class="ItemContent">
+          <text class="sheetName">{{item.name}}</text>
+        <text class="count">{{item.trackCount}}首</text>
+        </view>
+      </view>
+    </scroll-view>
+
+  </view>
+</view>

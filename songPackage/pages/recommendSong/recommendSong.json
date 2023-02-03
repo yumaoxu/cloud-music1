@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "DayHeaders":"/components/DayHeaders/DayHeaders"
+  },
+  "navigationBarBackgroundColor": "#91cdf6",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "每日推荐"
+}

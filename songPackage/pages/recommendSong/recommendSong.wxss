@@ -1,0 +1,68 @@
+/* list */
+.listContainer {
+  position: relative;
+  top: -20rpx;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.listHeader {
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.listHeader .changeMore {
+  float: right;
+}
+
+/* content */
+.listScroll {
+  padding: 0 20rpx;
+  height: calc(100vh - 380rpx);
+}
+
+.scrollItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+
+.scrollItem image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.musicInfo text {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.scrollItem .iconfont {
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+  line-height: 80rpx;
+  right: 20rpx;
+  text-align: center;
+  /* background-color: red; */
+}
+
+.authorInfo{
+  width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

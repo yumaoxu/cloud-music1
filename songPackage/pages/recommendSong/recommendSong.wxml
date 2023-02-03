@@ -1,0 +1,29 @@
+<view class="recommendContainer">
+  <!-- header -->
+  <DayHeaders></DayHeaders>
+
+  <!-- list -->
+  <view class="listContainer">
+    <view class="listHeader">
+      <text>播放全部</text>
+      <text class="changeMore">多选</text>
+    </view>
+  </view>
+
+  <!-- contnet -->
+  <scroll-view scroll-y class="listScroll">
+    <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id" bindtap="toSongDetail" data-index="{{index}}" data-song="{{item}}">
+      <image src="{{item.al.picUrl}}"></image>
+      <view class="musicInfo">
+        <text class="musicName">{{item.name}}</text>
+        <view class="authorInfo">
+          <text class="author" 
+          wx:for="{{item.ar}}" 
+          wx:key="id"
+          wx:for-item="authorItem">{{authorItem.name}} </text>
+        </view>
+      </view>
+      <text class="iconfont icon-gengduo"></text>
+    </view>
+  </scroll-view>
+</view>
